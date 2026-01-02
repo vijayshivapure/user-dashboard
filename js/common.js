@@ -115,48 +115,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const loadHTML = async (selector, file, callback) => {
+    const loadHTML = (selector, file) => {
         const el = document.querySelector(selector);
         if (!el) return;
 
-        try {
-            const res = await fetch(file);
-            if (!res.ok) throw new Error(file);
-            const html = await res.text();
-            el.innerHTML = html;
-            if (callback) callback();
-        } catch (err) {
-            console.error("Failed to load:", file);
-        }
+        fetch(file)
+            .then(res => {
+                if (!res.ok) throw new Error(file);
+                return res.text();
+            })
+            .then(html => el.innerHTML = html)
+            .catch(err => console.error("Failed to load:", err));
     };
 
-    loadHTML("header", "header.html");
-    loadHTML(".sidebar", "sidebar.html", setActiveMenu);
-    loadHTML("footer", "footer.html");
-    loadHTML(".breadcrumb-container", "breadcrumb.html", setBreadcrumb);
-
-    function setActiveMenu() {
-        const page = location.pathname.split("/").pop().replace(".html", "") || "index";
-        document.querySelectorAll(".sidebar a").forEach(link => {
-            if (link.dataset.page === page) {
-                link.classList.add("active");
-            }
-        });
-    }
-
-    function setBreadcrumb() {
-        const bc = document.querySelector(".breadcrumb-container");
-        if (!bc) return;
-
-        const title = bc.dataset.title;
-        const current = bc.dataset.current;
-
-        const titleEl = document.getElementById("breadcrumb-title");
-        const currentEl = document.getElementById("breadcrumb-current");
-
-        if (title && titleEl) titleEl.innerText = title;
-        if (current && currentEl) currentEl.innerText = current;
-    }
+    loadHTML("header", "pages/header.html");
+    loadHTML(".sidebar", "pages/sidebar.html");
+    loadHTML("footer", "pages/footer.html");
+    loadHTML(".breadcrumb-container", "pages/breadcrumb.html");
 
 });
 
