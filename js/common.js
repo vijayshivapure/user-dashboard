@@ -110,3 +110,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const loadHTML = (selector, file) => {
+        const el = document.querySelector(selector);
+        if (!el) return;
+
+        fetch(file)
+            .then(res => {
+                if (!res.ok) throw new Error(file);
+                return res.text();
+            })
+            .then(html => el.innerHTML = html)
+            .catch(err => console.error("Failed to load:", err));
+    };
+
+    loadHTML("header", "pages/header.html");
+    loadHTML(".sidebar", "pages/sidebar.html");
+    loadHTML("footer", "pages/footer.html");
+    loadHTML(".breadcrumb-container", "pages/breadcrumb.html");
+
+});
+
