@@ -441,141 +441,38 @@
             }
         }
 
-        /* --- SIDEBAR (Desktop Default) --- */
-        .sidebar {
-            width: 260px;
-            height: 100vh;
-            background: #2c3e50;
-            /* Dark Blue Background */
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            padding-top: 2rem;
-            transition: all 0.3s ease;
-            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Sidebar Links */
-        .sidebar a {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 15px 25px;
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            font-size: 1rem;
-            transition: 0.3s;
-            border-left: 4px solid transparent;
-        }
-
-        /* Icons */
-        .sidebar a i {
-            font-size: 1.4rem;
-        }
-
-        /* Hover & Active States */
-        .sidebar a:hover,
-        .sidebar a.active {
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            border-left-color: #3498db;
-            /* Blue accent on active */
-        }
-
-
-        /* --- RESPONSIVE MEDIA QUERIES --- */
-
-        /* 1. Tablet View (Collapsed Sidebar - Icons Only) 
-   Screens between 768px and 992px */
-        @media (min-width: 769px) and (max-width: 992px) {
-            .sidebar {
-                width: 80px;
-                /* Shrink width */
-                padding-top: 1.5rem;
-            }
-
-            .sidebar a {
-                justify-content: center;
-                /* Center icons */
-                padding: 15px 10px;
-                flex-direction: column;
-                gap: 5px;
-                text-align: center;
-            }
-
-            .sidebar a span {
-                font-size: 0.7rem;
-                /* Make text tiny or hide it */
-                display: none;
-                /* remove this line if you want tiny text */
-            }
-
-            .sidebar a i {
-                font-size: 1.8rem;
-                /* Make icons larger */
-                margin: 0;
-            }
-        }
-
-        /* 2. Mobile View (Bottom Navigation Bar) 
-   Screens 768px and below */
         @media (max-width: 768px) {
+            .main-wrapper {
+                flex-direction: column;
+            }
+
             .sidebar {
                 width: 100%;
-                height: auto;
-                /* Remove full height */
+                position: fixed;
                 bottom: 0;
-                /* Stick to bottom */
-                top: auto;
-                /* Unset top */
                 left: 0;
+                height: 70px;
                 flex-direction: row;
-                /* Horizontal layout */
                 justify-content: space-around;
-                /* Even spacing */
-                padding: 0;
-                background: #fff;
-                /* White background for mobile app feel */
-                border-top: 1px solid #dee2e6;
-                box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+                z-index: 1000;
             }
 
             .sidebar a {
                 flex-direction: column;
-                /* Icon top, text bottom */
-                gap: 4px;
-                padding: 10px 5px;
-                flex: 1;
-                /* Each item takes equal width */
                 border-left: none;
-                /* Remove desktop border */
-                border-top: 3px solid transparent;
-                /* Add top border for active state */
-                color: #6c757d;
-                /* Darker text for white background */
+                border-bottom: 3px solid transparent;
+                padding: 0.6rem;
             }
 
-            .sidebar a span {
-                font-size: 0.75rem;
-                /* Smaller text for mobile */
-                font-weight: 500;
-            }
-
-            .sidebar a i {
-                font-size: 1.5rem;
-                margin-bottom: 2px;
-            }
-
-            /* Mobile Active State */
-            .sidebar a:hover,
             .sidebar a.active {
-                background: transparent;
-                color: #2c3e50;
-                /* Active color */
-                border-top-color: #3498db;
-                /* Blue indicator on top */
+                border-bottom-color: var(--primary-color);
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            .content {
+                padding-bottom: 90px;
+                /* space for bottom sidebar */
             }
         }
