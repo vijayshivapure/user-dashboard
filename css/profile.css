@@ -1,357 +1,191 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", sans-serif;
-}
+/* EMPLOYEE PROFILE PAGE */
 
-body {
-    background: #f5f7fb;
-    color: #2c3e50;
-}
-
-/* PAGE */
-.user-page {
-    padding: 2rem;
-}
-
-/* HEADER */
-.page-header {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.page-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.page-header p {
-    color: #6c757d;
-}
-
-/* FILTER BAR */
-.filter-bar {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-}
-
-.filters-left {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.search-box {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    border: 1px solid #dee2e6;
-    padding: 0.5rem 0.75rem;
-    border-radius: 30px;
-}
-
-.search-box input {
-    border: none;
-    outline: none;
-}
-
-select {
-    padding: 0.5rem 0.75rem;
-    border-radius: 30px;
-    border: 1px solid #dee2e6;
-}
-
-/* BUTTONS */
-.btn-primary {
-    background: #2c3e50;
-    color: #fff;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 30px;
-    cursor: pointer;
-}
-
-.btn-outline {
-    background: transparent;
-    border: 1px solid #2c3e50;
-    padding: 0.6rem 1.2rem;
-    border-radius: 30px;
-    cursor: pointer;
-}
-
-/* TABLE */
-.table-wrapper {
-    background: #fff;
-    border-radius: 12px;
-    overflow-x: auto;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-thead {
-    background: #2c3e50;
-    color: #fff;
-}
-
-th,
-td {
-    padding: 1rem;
-    text-align: left;
-}
-
-tbody tr {
-    border-bottom: 1px solid #edf2f7;
-}
-
-tbody tr:hover {
-    background: #f8fafc;
-}
-
-/* USER CELL */
-.user-cell {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.user-cell img {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-}
-
-/* STATUS */
-.status {
-    padding: 0.3rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.status.active {
-    background: #2ecc71;
-    color: #fff;
-}
-
-.status.inactive {
-    background: #adb5bd;
-    color: #fff;
-}
-
-.status.banned {
-    background: #e74c3c;
-    color: #fff;
-}
-
-/* ACTIONS */
-.actions {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.actions button {
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    font-size: 1.1rem;
-}
-
-.view-btn {
-    color: #3498db;
-}
-
-.delete-btn {
-    color: #e74c3c;
-}
-
-/* --- BASE CONTAINER --- */
 .employee-profile-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px;
+    background: #f5f7fb;
 }
 
-/* --- PROFILE HEADER RESPONSIVENESS --- */
+/* Header */
 .profile-header {
-    background: linear-gradient(135deg, #2c3e50, #4ca1af);
-    color: white;
-    padding: 2.5rem;
-    border-radius: 15px;
-    position: relative;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    border-radius: 14px;
+    padding: 2rem;
+    color: #fff;
     margin-bottom: 2rem;
+    position: relative;
 }
 
 .employee-id-badge {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 5px 15px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.35rem 0.75rem;
     border-radius: 20px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
 .profile-main-info {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .profile-avatar {
-    width: 120px;
-    height: 120px;
-    background: #fff;
-    color: #2c3e50;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #4cc9f0;
+    font-size: 2rem;
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
-    font-weight: bold;
-    border-radius: 50%;
-    flex-shrink: 0;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.profile-name-title h1 { font-size: 2.2rem; margin-bottom: 5px; }
-.profile-name-title h2 { font-size: 1.2rem; opacity: 0.9; font-weight: 400; }
+.profile-name-title h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+}
+
+.profile-name-title h2 {
+    font-size: 1rem;
+    opacity: 0.9;
+}
 
 .contact-info {
     display: flex;
-    gap: 1.5rem;
-    margin-top: 15px;
-    flex-wrap: wrap; /* Allows wrapping on small screens */
+    gap: 1.2rem;
+    font-size: 0.9rem;
 }
 
-/* --- GRID LAYOUT FOR INFO CARDS --- */
+/* Content */
+.profile-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Info Cards */
 .basic-info-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 Columns on desktop */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
-    margin-bottom: 2rem;
 }
 
 .info-card {
-    background: #fff;
+    border: 1px solid #e9ecef;
     padding: 1.5rem;
     border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    background: #fafbfd;
+}
+
+.info-card h4 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .info-field {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #f1f1f1;
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed #dee2e6;
 }
 
-.info-field span { color: #6c757d; }
+.info-field:last-child {
+    border-bottom: none;
+}
 
-/* --- TABLE RESPONSIVENESS --- */
+/* Work Info Table */
 .work-info-table {
     width: 100%;
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
     border-collapse: collapse;
+    margin-top: 1rem;
 }
 
-.work-info-table th, .work-info-table td {
-    padding: 1.2rem;
-    border: 1px solid #edf2f7;
-    text-align: left;
+.work-info-table th,
+.work-info-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e9ecef;
 }
 
-.work-info-table th { background: #f8fafc; width: 30%; }
+.experience {
+    margin-left: 0.75rem;
+    color: #6c757d;
+}
 
-/* --- ACTION BUTTONS --- */
+/* Status */
+.status-badge.active {
+    background: rgba(46, 204, 113, 0.15);
+    color: #2ecc71;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Actions */
+.actions-section {
+    margin-top: 2rem;
+}
+
 .action-buttons {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
 }
 
 .btn-action {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 12px;
+    border: none;
+    padding: 0.5rem 1rem;
     border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-    border: 1px solid #dee2e6;
-    color: #2c3e50;
-    background: #fff;
+    font-size: 0.85rem;
+    cursor: pointer;
+    color: #fff;
 }
 
-.btn-action:hover { background: #f8fafc; transform: translateY(-2px); }
+/* External Links as Buttons */
+.action-buttons a {
+    text-decoration: none;
+}
 
-/* --- MEDIA QUERIES (The Magic Part) --- */
+.btn-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+}
 
-/* Tablet View (992px and below) */
-@media (max-width: 992px) {
+
+.btn-action.edit {
+    background: #4361ee;
+}
+
+.btn-action.terminate {
+    background: #f39c12;
+}
+
+.btn-action.print {
+    background: #6c757d;
+}
+
+.btn-action.view {
+    background: #3498db;
+}
+
+.btn-action.delete {
+    background: #e74c3c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
     .profile-main-info {
         flex-direction: column;
         text-align: center;
-    }
-    
-    .contact-info {
-        justify-content: center;
-    }
-
-    .employee-id-badge {
-        position: static;
-        display: inline-block;
-        margin-bottom: 1rem;
-    }
-}
-
-/* Mobile View (768px and below) */
-@media (max-width: 768px) {
-    .basic-info-grid {
-        grid-template-columns: 1fr; /* Stack cards vertically */
-    }
-
-    .profile-name-title h1 { font-size: 1.8rem; }
-    
-    .work-info-table th {
-        width: 40%;
-        font-size: 0.9rem;
-    }
-
-    .info-field {
-        flex-direction: column; /* Stack label and value inside cards */
-        align-items: flex-start;
-    }
-
-    .action-buttons {
-        grid-template-columns: 1fr; /* One button per row on mobile */
-    }
-}
-
-/* Small Mobile View (480px and below) */
-@media (max-width: 480px) {
-    .profile-header {
-        padding: 1.5rem;
-    }
-
-    .profile-avatar {
-        width: 90px;
-        height: 90px;
-        font-size: 2rem;
-    }
-
-    .contact-info span {
-        font-size: 0.85rem;
     }
 }
