@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Invoice</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/breadgram.css">
+
+    <!-- Invoice Page CSS -->
+    <link rel="stylesheet" href="../css/invoice.css">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Common JS -->
+    <script src="../js/common.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER (Dynamic) -->
+    <header></header>
+
+    <div class="main-wrapper">
+
+        <!-- SIDEBAR (Dynamic) -->
+        <nav class="sidebar"></nav>
+
+        <!-- CONTENT -->
+        <main class="content">
+
+            <!-- BREADCRUMB -->
+            <div class="breadcrumb-container" data-title="Manage Invoice" data-current="Manage Invoice">
+            </div>
+
+
+
+
+
+            <!-- INVOICE LIST -->
+            <div class="orders-table-container p-4">
+                <h3>Invoice List</h3>
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Invoice No</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Due Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><strong>INV-001</strong></td>
+                                <td>John Smith</td>
+                                <td>12-01-2026</td>
+                                <td>22-01-2026</td>
+                                <td>₹5,000</td>
+                                <td><span class="status-badge delivered">Paid</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <a href="invoice-view.html" class="btn-action btn-view">
+                                            <i class="ri-eye-line"></i> View
+                                        </a>
+                                        <a href="#" class="btn-action btn-edit">
+                                            <i class="ri-pencil-line"></i> Edit
+                                        </a>
+                                        <a href="#" class="btn-action btn-view">
+                                            <i class="ri-download-line"></i> Download
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>INV-002</strong></td>
+                                <td>Emma Johnson</td>
+                                <td>15-01-2026</td>
+                                <td>25-01-2026</td>
+                                <td>₹3,200</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <a href="invoice-view.html" class="btn-action btn-view">
+                                            <i class="ri-eye-line"></i> View
+                                        </a>
+                                        <a href="#" class="btn-action btn-edit">
+                                            <i class="ri-pencil-line"></i> Edit
+                                        </a>
+                                        <a href="#" class="btn-action btn-view">
+                                            <i class="ri-download-line"></i> Download
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>INV-003</strong></td>
+                                <td>Michael Brown</td>
+                                <td>18-01-2026</td>
+                                <td>28-01-2026</td>
+                                <td>₹7,500</td>
+                                <td><span class="status-badge cancelled">Unpaid</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <a href="invoice-view.html" class="btn-action btn-view">
+                                            <i class="ri-eye-line"></i> View
+                                        </a>
+                                        <a href="#" class="btn-action btn-edit">
+                                            <i class="ri-pencil-line"></i> Edit
+                                        </a>
+                                        <a href="#" class="btn-action btn-view">
+                                            <i class="ri-download-line"></i> Download
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>INV-004</strong></td>
+                                <td>Sarah Williams</td>
+                                <td>20-01-2026</td>
+                                <td>30-01-2026</td>
+                                <td>₹6,500</td>
+                                <td><span class="status-badge delivered">Paid</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <a href="invoice-view.html" class="btn-action btn-view">
+                                            <i class="ri-eye-line"></i> View
+                                        </a>
+                                        <a href="#" class="btn-action btn-edit">
+                                            <i class="ri-pencil-line"></i> Edit
+                                        </a>
+                                        <a href="#" class="btn-action btn-view">
+                                            <i class="ri-download-line"></i> Download
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>INV-005</strong></td>
+                                <td>David Miller</td>
+                                <td>22-01-2026</td>
+                                <td>01-02-2026</td>
+                                <td>₹9,200</td>
+                                <td><span class="status-badge in-progress">Overdue</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <a href="invoice-view.html" class="btn-action btn-view">
+                                            <i class="ri-eye-line"></i> View
+                                        </a>
+                                        <a href="#" class="btn-action btn-edit">
+                                            <i class="ri-pencil-line"></i> Edit
+                                        </a>
+                                        <a href="#" class="btn-action btn-view">
+                                            <i class="ri-download-line"></i> Download
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>INV-006</strong></td>
+                                <td>Lisa Anderson</td>
+                                <td>25-01-2026</td>
+                                <td>04-02-2026</td>
+                                <td>₹4,800</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <a href="invoice-view.html" class="btn-action btn-view">
+                                            <i class="ri-eye-line"></i> View
+                                        </a>
+                                        <a href="#" class="btn-action btn-edit">
+                                            <i class="ri-pencil-line"></i> Edit
+                                        </a>
+                                        <a href="#" class="btn-action btn-view">
+                                            <i class="ri-download-line"></i> Download
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- PAGINATION -->
+                <div class="pagination-container">
+                    <div class="showing-info">
+                        Showing 1 to 6 of 245 invoices
+                    </div>
+                    <div class="pagination">
+                        <a href="#" class="page-link" aria-label="Previous page" title="Previous page">
+                            <i class="ri-arrow-left-s-line"></i>
+                        </a>
+
+                        <a href="#" class="page-link active" aria-current="page">1</a>
+                        <a href="#" class="page-link">2</a>
+                        <a href="#" class="page-link">3</a>
+                        <a href="#" class="page-link">4</a>
+                        <a href="#" class="page-link">5</a>
+
+                        <a href="#" class="page-link" aria-label="Next page" title="Next page">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- FOOTER (Dynamic) -->
+    <footer></footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

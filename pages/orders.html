@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Orders</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/breadgram.css">
+    <link rel="stylesheet" href="../css/orders.css">
+    <script src="../js/common.js"></script>
+
+
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header></header>
+
+
+    <div class="main-wrapper">
+
+        <!-- SIDEBAR -->
+        <nav class="sidebar"></nav>
+
+        <!-- CONTENT -->
+        <main class="content">
+
+            <!-- BREADCRUMB -->
+            <div class="breadcrumb-container" data-title="Manage Orders" data-current="Manage Orders">
+            </div>
+
+
+
+            <!-- ORDERS TABLE -->
+            <div class="orders-table-container p-4">
+                <h3>Order List</h3>
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Order Date</th>
+                                <th>Customer</th>
+                                <th>Product</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><strong>ORD-101</strong></td>
+                                <td>10-01-2026</td>
+                                <td>John Smith</td>
+                                <td>Web Development Course</td>
+                                <td>₹7,500</td>
+                                <td><span class="status-badge delivered">Delivered</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <a href="" class="btn-action btn-view">
+                                            <i class="ri-eye-line"></i> View
+                                        </a>
+                                        <a href="#" class="btn-action btn-edit">
+                                            <i class="ri-pencil-line"></i> Edit
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>ORD-102</strong></td>
+                                <td>14-01-2026</td>
+                                <td>Emma Johnson</td>
+                                <td>UI/UX Design Course</td>
+                                <td>₹3,200</td>
+                                <td><span class="status-badge in-progress">In Progress</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <a href="order-view.html" class="btn-action btn-view">
+                                            <i class="ri-eye-line"></i> View
+                                        </a>
+                                        <a href="#" class="btn-action btn-edit">
+                                            <i class="ri-pencil-line"></i> Edit
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>ORD-103</strong></td>
+                                <td>18-01-2026</td>
+                                <td>Michael Brown</td>
+                                <td>Java Full Stack Course</td>
+                                <td>₹9,000</td>
+                                <td><span class="status-badge cancelled">Cancelled</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <a href="order-view.html" class="btn-action btn-view">
+                                            <i class="ri-eye-line"></i> View
+                                        </a>
+                                        <a href="#" class="btn-action btn-cancel">
+                                            <i class="ri-delete-bin-line"></i> Delete
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>ORD-104</strong></td>
+                                <td>20-01-2026</td>
+                                <td>Sarah Williams</td>
+                                <td>Python Course</td>
+                                <td>₹6,500</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <a href="order-view.html" class="btn-action btn-view">
+                                            <i class="ri-eye-line"></i> View
+                                        </a>
+                                        <a href="#" class="btn-action btn-edit">
+                                            <i class="ri-pencil-line"></i> Edit
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>ORD-105</strong></td>
+                                <td>22-01-2026</td>
+                                <td>David Miller</td>
+                                <td>Web Development Course</td>
+                                <td>₹7,500</td>
+                                <td><span class="status-badge delivered">Delivered</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <a href="order-view.html" class="btn-action btn-view">
+                                            <i class="ri-eye-line"></i> View
+                                        </a>
+                                        <a href="#" class="btn-action btn-edit">
+                                            <i class="ri-pencil-line"></i> Edit
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>ORD-106</strong></td>
+                                <td>25-01-2026</td>
+                                <td>Lisa Anderson</td>
+                                <td>UI/UX Design Course</td>
+                                <td>₹3,200</td>
+                                <td><span class="status-badge in-progress">In Progress</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <a href="order-view.html" class="btn-action btn-view">
+                                            <i class="ri-eye-line"></i> View
+                                        </a>
+                                        <a href="#" class="btn-action btn-edit">
+                                            <i class="ri-pencil-line"></i> Edit
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- PAGINATION -->
+                <div class="pagination-container">
+                    <div class="showing-info">
+                        Showing 1 to 6 of 245 invoices
+                    </div>
+                    <div class="pagination">
+                        <a href="#" class="page-link" aria-label="Previous page" title="Previous page">
+                            <i class="ri-arrow-left-s-line"></i>
+                        </a>
+
+                        <a href="#" class="page-link active" aria-current="page">1</a>
+                        <a href="#" class="page-link">2</a>
+                        <a href="#" class="page-link">3</a>
+                        <a href="#" class="page-link">4</a>
+                        <a href="#" class="page-link">5</a>
+
+                        <a href="#" class="page-link" aria-label="Next page" title="Next page">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+    </div>
+    </div>
+
+    </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer></footer>
+
+
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
